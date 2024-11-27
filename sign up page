@@ -1,0 +1,212 @@
+package bank;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Signup extends JFrame {
+    // Instance variables
+    JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11;
+    JTextField tf1, tf2, tf3, tf4, tf5, tf6, tf7;
+    JRadioButton r1, r2, r3, m1, m2, m3;
+    JButton b;
+
+    public Signup() {
+        // Set title and layout
+        setTitle("New Account Application Form");
+        setLayout(null);
+
+        // Title label
+        l1 = new JLabel("Application Form");
+        l1.setFont(new Font("Raleway", Font.BOLD, 40));
+        l1.setForeground(Color.WHITE);
+        l1.setBounds(150, 20, 600, 40);
+        add(l1);
+
+        // Labels and text fields
+        l2 = new JLabel("Name:");
+        l2.setFont(new Font("Raleway", Font.PLAIN, 20));
+        l2.setForeground(Color.WHITE);
+        l2.setBounds(100, 100, 200, 30);
+        add(l2);
+
+        tf1 = new JTextField();
+        tf1.setFont(new Font("Raleway", Font.PLAIN, 16));
+        tf1.setBounds(300, 100, 400, 30);
+        add(tf1);
+
+        l3 = new JLabel("Date of Birth:");
+        l3.setFont(new Font("Raleway", Font.PLAIN, 20));
+        l3.setForeground(Color.WHITE);
+        l3.setBounds(100, 150, 200, 30);
+        add(l3);
+
+        tf2 = new JTextField("DD/MM/YYYY");
+        tf2.setFont(new Font("Raleway", Font.PLAIN, 16));
+        tf2.setBounds(300, 150, 400, 30);
+        add(tf2);
+
+        l4 = new JLabel("Gender:");
+        l4.setFont(new Font("Raleway", Font.PLAIN, 20));
+        l4.setForeground(Color.WHITE);
+        l4.setBounds(100, 200, 200, 30);
+        add(l4);
+
+        r1 = new JRadioButton("Male");
+        r1.setFont(new Font("Raleway", Font.PLAIN, 16));
+        r1.setBounds(300, 200, 100, 30);
+        r1.setBackground(Color.DARK_GRAY);
+        r1.setForeground(Color.WHITE);
+        add(r1);
+
+        r2 = new JRadioButton("Female");
+        r2.setFont(new Font("Raleway", Font.PLAIN, 16));
+        r2.setBounds(400, 200, 100, 30);
+        r2.setBackground(Color.DARK_GRAY);
+        r2.setForeground(Color.WHITE);
+        add(r2);
+
+        r3 = new JRadioButton("Bayot");
+        r3.setFont(new Font("Raleway", Font.PLAIN, 16));
+        r3.setBounds(500, 200, 100, 30);
+        r3.setBackground(Color.DARK_GRAY);
+        r3.setForeground(Color.WHITE);
+        add(r3);
+
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(r1);
+        genderGroup.add(r2);
+        genderGroup.add(r3);
+
+        l5 = new JLabel("Marital Status:");
+        l5.setFont(new Font("Raleway", Font.PLAIN, 20));
+        l5.setForeground(Color.WHITE);
+        l5.setBounds(100, 250, 200, 30);
+        add(l5);
+
+        m1 = new JRadioButton("Single");
+        m1.setFont(new Font("Raleway", Font.PLAIN, 16));
+        m1.setBounds(300, 250, 100, 30);
+        m1.setBackground(Color.DARK_GRAY);
+        m1.setForeground(Color.WHITE);
+        add(m1);
+
+        m2 = new JRadioButton("Married");
+        m2.setFont(new Font("Raleway", Font.PLAIN, 16));
+        m2.setBounds(400, 250, 100, 30);
+        m2.setBackground(Color.DARK_GRAY);
+        m2.setForeground(Color.WHITE);
+        add(m2);
+
+        m3 = new JRadioButton("Other");
+        m3.setFont(new Font("Raleway", Font.PLAIN, 16));
+        m3.setBounds(500, 250, 100, 30);
+        m3.setBackground(Color.DARK_GRAY);
+        m3.setForeground(Color.WHITE);
+        add(m3);
+
+        ButtonGroup maritalGroup = new ButtonGroup();
+        maritalGroup.add(m1);
+        maritalGroup.add(m2);
+        maritalGroup.add(m3);
+
+        l6 = new JLabel("Email:");
+        l6.setFont(new Font("Raleway", Font.PLAIN, 20));
+        l6.setForeground(Color.WHITE);
+        l6.setBounds(100, 300, 200, 30);
+        add(l6);
+
+        tf3 = new JTextField();
+        tf3.setFont(new Font("Raleway", Font.PLAIN, 16));
+        tf3.setBounds(300, 300, 400, 30);
+        add(tf3);
+
+        l7 = new JLabel("Address:");
+        l7.setFont(new Font("Raleway", Font.PLAIN, 20));
+        l7.setForeground(Color.WHITE);
+        l7.setBounds(100, 350, 200, 30);
+        add(l7);
+
+        tf4 = new JTextField();
+        tf4.setFont(new Font("Raleway", Font.PLAIN, 16));
+        tf4.setBounds(300, 350, 400, 30);
+        add(tf4);
+
+        l8 = new JLabel("City:");
+        l8.setFont(new Font("Raleway", Font.PLAIN, 20));
+        l8.setForeground(Color.WHITE);
+        l8.setBounds(100, 400, 200, 30);
+        add(l8);
+
+        tf5 = new JTextField();
+        tf5.setFont(new Font("Raleway", Font.PLAIN, 16));
+        tf5.setBounds(300, 400, 400, 30);
+        add(tf5);
+
+        l9 = new JLabel("Pin Code:");
+        l9.setFont(new Font("Raleway", Font.PLAIN, 20));
+        l9.setForeground(Color.WHITE);
+        l9.setBounds(100, 450, 200, 30);
+        add(l9);
+
+        tf6 = new JTextField();
+        tf6.setFont(new Font("Raleway", Font.PLAIN, 16));
+        tf6.setBounds(300, 450, 400, 30);
+        add(tf6);
+
+        l10 = new JLabel("Re-enter Pin Code:");
+        l10.setFont(new Font("Raleway", Font.PLAIN, 20));
+        l10.setForeground(Color.WHITE);
+        l10.setBounds(100, 500, 200, 30);
+        add(l10);
+
+        tf7 = new JTextField();
+        tf7.setFont(new Font("Raleway", Font.PLAIN, 16));
+        tf7.setBounds(300, 500, 400, 30);
+        add(tf7);
+
+        // Submit button
+        b = new JButton("Submit");
+        b.setFont(new Font("Raleway", Font.BOLD, 16));
+        b.setBounds(350, 550, 100, 30);
+        add(b);
+
+        // Action Listener for Submit button
+        b.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = tf1.getText().trim();
+                String dob = tf2.getText().trim();
+                String email = tf3.getText().trim();
+                String address = tf4.getText().trim();
+                String city = tf5.getText().trim();
+                String pinCode = tf6.getText().trim();
+                String reEnterPinCode = tf7.getText().trim();
+
+                if (name.isEmpty() || dob.isEmpty() || email.isEmpty() || address.isEmpty() || city.isEmpty() || pinCode.isEmpty() || reEnterPinCode.isEmpty() || (!r1.isSelected() && !r2.isSelected() && !r3.isSelected()) || (!m1.isSelected() && !m2.isSelected() && !m3.isSelected())) {
+                    JOptionPane.showMessageDialog(null, "Please fill all the fields!", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                if (!pinCode.equals(reEnterPinCode)) {
+                    JOptionPane.showMessageDialog(null, "Pin Code does not match!", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                JOptionPane.showMessageDialog(null, "Form Submitted Successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+
+        // Frame properties
+        getContentPane().setBackground(Color.DARK_GRAY);
+        setSize(800, 700);
+        setLocation(300, 100);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new Signup();
+    }
+}
